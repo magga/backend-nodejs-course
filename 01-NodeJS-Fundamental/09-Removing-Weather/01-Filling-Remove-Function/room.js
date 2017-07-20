@@ -36,11 +36,7 @@ var getAll = () => {
 };
 
 var getWeather = (timestamp) => {
-    var weatherArr = fetchWeatherList();
-
-    var filteredWeather = weatherArr.filter((item) => item.timestamp === timestamp);
-
-    return filteredWeather[0];
+    console.log(`Getting weather with the timestamp : ${timestamp}`);
 }
 
 var removeWeather = (timestamp) => {
