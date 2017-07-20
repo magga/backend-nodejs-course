@@ -1,0 +1,15 @@
+{
+  "name": "01-yargs-argv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "debug": "node --inspect-brk=5858 app.js add --tem 20 --hum 30"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^8.0.2"
+  }
+}
