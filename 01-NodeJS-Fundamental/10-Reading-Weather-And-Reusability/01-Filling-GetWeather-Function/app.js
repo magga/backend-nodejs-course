@@ -11,13 +11,7 @@ if (command === "add") {
 } else if (command === "list") {
     room.getAll();
 } else if (command === "read") {
-    var weather = room.getWeather(yArgv.time);
-
-    if (weather) {
-        console.log(`Weather Found. Temperature : ${weather.temperature}, Humidity : ${weather.humidity}, Timestamp : ${weather.timestamp}`);
-    } else {
-        console.log("No weather found");
-    }
+    room.getWeather(yArgv.time);
 } else if (command === "remove") {
     var deleted = room.removeWeather(yArgv.time);
 

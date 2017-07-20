@@ -36,16 +36,20 @@ var getAll = () => {
 };
 
 var getWeather = (timestamp) => {
-    var weatherArr = fetchWeatherList();
-
-    var filteredWeather = weatherArr.filter((item) => item.timestamp === timestamp);
-
-    return filteredWeather[0];
+    console.log(`Getting weather with the timestamp : ${timestamp}`);
 }
 
 var removeWeather = (timestamp) => {
     var weatherArr = fetchWeatherList();
 
+    // //Normal Syntax
+    // var filteredWeather = weatherArr.filter((item) => {
+    //     if (item.timestamp !== timestamp) {
+    //         return item;
+    //     }
+    // });
+
+    //ES6 Syntax
     var filteredWeather = weatherArr.filter((item) => item.timestamp !== timestamp);
 
     saveWeatherList(filteredWeather);
