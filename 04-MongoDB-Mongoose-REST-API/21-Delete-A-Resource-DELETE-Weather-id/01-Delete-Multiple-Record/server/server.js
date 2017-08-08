@@ -59,14 +59,8 @@ app.get("/weathers/:id", (req, res) => {
 });
 
 // DELETE /weathers/123123
-app.delete("/weathers/:id", (req, res) => {
-    var id = req.params.id;
-
-    if(!ObjectID.isValid(id)){
-        res.status(400).send("ID Not Valid");
-        return;
-    }
-
+app.delete("/weathers/", (req, res) => {
+    
     // DELETE Multiple Record
     Weather.remove({}).then((results) => {
         res.send(results);
